@@ -22,6 +22,7 @@ export class EpisodeScene extends Scene {
     this._completedMissions = new Set();
     this._playerFaceKey = null;
     this._exitConfirm = false;
+    this._initialized = false;
   }
 
   async init() {
@@ -49,9 +50,11 @@ export class EpisodeScene extends Scene {
       state.episodios[episodeId] = 'en_progreso';
       SaveManager.save(state);
     }
+    this._initialized = true;
   }
 
   update(dt) {
+    if (!this._initialized) return;
     this._dialogue.update(dt);
 
     if (!InputManager.dialogueActive) {
@@ -111,6 +114,17 @@ export class EpisodeScene extends Scene {
   draw(ctx) {
     const bg = AssetLoader.get(this._config.backgroundKey);
     ctx.drawImage(bg, 0, 0, 1920, 1080);
+
+    if (!this._initialized) {
+      ctx.fillStyle = 'rgba(0,0,0,0.55)';
+      ctx.fillRect(0, 0, 1920, 1080);
+      ctx.fillStyle = '#FDC300';
+      ctx.font = 'bold 36px monospace';
+      ctx.textAlign = 'center';
+      ctx.fillText('Cargando episodio...', 960, 540);
+      ctx.textAlign = 'left';
+      return;
+    }
 
     this._npcs.forEach(n => n.draw(ctx));
     this._player.draw(ctx);

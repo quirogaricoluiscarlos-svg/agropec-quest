@@ -68,7 +68,7 @@ export class CharacterSelectScene extends Scene {
 
       try {
         const img = AssetLoader.get(ch.faceKey);
-        ctx.drawImage(img, x + 175, 180, 350, 350);
+        ctx.drawImage(img, 0, 0, img.naturalWidth / 2, img.naturalHeight, x + 175, 180, 350, 350);
       } catch {}
 
       ctx.textAlign = 'center';

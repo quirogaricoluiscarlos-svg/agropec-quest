@@ -2,6 +2,7 @@
 import { Scene } from './Scene.js';
 import { InputManager } from '../systems/InputManager.js';
 import { SaveManager } from '../systems/SaveManager.js';
+import { AssetLoader } from '../engine/AssetLoader.js';
 import { CharacterSelectScene } from './CharacterSelectScene.js';
 import { WorldMapScene } from './WorldMapScene.js';
 
@@ -35,8 +36,15 @@ export class TitleScene extends Scene {
   }
 
   draw(ctx) {
-    ctx.fillStyle = '#00304D';
-    ctx.fillRect(0, 0, 1920, 1080);
+    try {
+      const bg = AssetLoader.get('world_map');
+      ctx.drawImage(bg, 0, 0, 1920, 1080);
+      ctx.fillStyle = 'rgba(0, 30, 60, 0.72)';
+      ctx.fillRect(0, 0, 1920, 1080);
+    } catch {
+      ctx.fillStyle = '#00304D';
+      ctx.fillRect(0, 0, 1920, 1080);
+    }
 
     ctx.fillStyle = '#39A900';
     ctx.font = 'bold 72px monospace';
