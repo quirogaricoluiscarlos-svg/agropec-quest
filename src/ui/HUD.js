@@ -37,7 +37,8 @@ export class HUD {
     if (playerFaceKey) {
       try {
         const img = AssetLoader.get(playerFaceKey);
-        ctx.drawImage(img, 0, 0, img.naturalWidth / 2, img.naturalHeight, 22, 20, 70, 70);
+        const sw = img.naturalWidth / 2;
+        ctx.drawImage(img, sw, 0, sw, img.naturalHeight, 22, 20, 70, 70);
       } catch {}
     }
 
