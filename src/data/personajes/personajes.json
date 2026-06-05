@@ -1,0 +1,44 @@
+﻿{
+  "personajes": [
+    {
+      "id": "veterinario",
+      "nombre": "Dr. Ramírez",
+      "rol": "Médico Veterinario",
+      "sprite": "assets/images/sprites/veterinario/",
+      "atributos": { "salud": 95, "agilidad": 45, "conocimiento": 90, "gestion": 60 },
+      "habilidad": "Diagnóstico Rápido"
+    },
+    {
+      "id": "chigui",
+      "nombre": "Chigui",
+      "rol": "Mascota LVOGS",
+      "sprite": "assets/images/sprites/chigui/",
+      "atributos": { "salud": 70, "agilidad": 85, "conocimiento": 75, "gestion": 70 },
+      "habilidad": "Carisma Total"
+    },
+    {
+      "id": "administrador",
+      "nombre": "Don Carlos",
+      "rol": "Administrador de Finca",
+      "sprite": "assets/images/sprites/administrador/",
+      "atributos": { "salud": 65, "agilidad": 50, "conocimiento": 80, "gestion": 99 },
+      "habilidad": "Gestión Maestra"
+    },
+    {
+      "id": "aprendiz_m",
+      "nombre": "Andrés",
+      "rol": "Aprendiz SENA",
+      "sprite": "assets/images/sprites/aprendiz_m/",
+      "atributos": { "salud": 80, "agilidad": 90, "conocimiento": 70, "gestion": 60 },
+      "habilidad": "Aprendizaje Acelerado"
+    },
+    {
+      "id": "aprendiz_f",
+      "nombre": "Valentina",
+      "rol": "Aprendiz SENA",
+      "sprite": "assets/images/sprites/aprendiz_f/",
+      "atributos": { "salud": 75, "agilidad": 80, "conocimiento": 85, "gestion": 60 },
+      "habilidad": "Ojo Clínico"
+    }
+  ]
+}

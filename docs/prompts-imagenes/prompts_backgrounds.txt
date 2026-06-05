@@ -1,0 +1,76 @@
+﻿# PROMPTS PNG — AGROPEC QUEST
+# Usar con: Midjourney v6, DALL-E 3, Leonardo.AI (modelo Pixel Art)
+# Parámetros globales: --ar 16:9 --style pixel --v 6
+# Negative prompt: blur, realistic, 3D, smooth shading, text, UI, HUD
+
+## EP0 — ep0_entrada.png
+16-bit SNES pixel art isometric 2.5D top-down view, entrance gate of a
+Colombian cattle farm La Esperanza, wooden ranch gate with hand-painted
+sign, dirt road leading inward with tire tracks, lush green savanna
+llanos orientales landscape, palm trees native to Colombian llanos,
+white fence posts, small guardhouse, morning golden light, vibrant
+saturated greens and earth browns, flat block shading, 1px dark outlines
+pixel perfect, clean background no HUD no UI, 1920x1080
+
+## EP1 — ep1_potrero.png
+16-bit SNES pixel art isometric 2.5D top-down view, Colombian cattle
+farm pasture divided into paddocks, left half degraded dry yellow-brown
+grass, right half vibrant recovered green pasture, wooden electric fence
+posts, Holstein and Brown Swiss cattle grazing, water troughs and
+mineral salt licks, native llanos palm trees, flat block shading,
+1px dark outlines, clean tilemap no UI, 1920x1080
+
+## EP2 — ep2_ordeno.png
+16-bit SNES pixel art isometric 2.5D top-down view, Colombian dairy
+farm milking parlor, corrugated zinc roof structure open sides, milking
+stalls with Holstein cows, stainless steel bulk milk cooling tank,
+rubber floor mats, overhead pipeline milking system, wash area,
+morning blue-white light, flat block shading, 1px dark outlines,
+clean background no UI, 1920x1080
+
+## EP3 — ep3_maternidad.png
+16-bit SNES pixel art isometric 2.5D top-down view, cattle maternity
+pen Colombian farm, enclosed corral thick straw bedding, pregnant cow
+lying down, newborn calf with wet coat, wooden birthing pen, colostrum
+bucket obstetric kit on fence rail, warm amber lantern lighting,
+flat block shading, 1px dark outlines, clean tilemap, 1920x1080
+
+## EP4 — ep4_enfermeria.png
+16-bit SNES pixel art isometric 2.5D top-down view, cattle veterinary
+area Colombian farm, metal squeeze chute working alley wooden posts,
+vaccine refrigerator unit, veterinary supply wall rack, biosecurity
+footbath, Zebu-cross bull in chute, quarantine pen, concrete floor
+drainage channel, flat block shading, 1px dark outlines, 1920x1080
+
+## EP5 — ep5_silo.png
+16-bit SNES pixel art isometric 2.5D top-down view, cattle feeding
+area Colombian farm, tall cylindrical metal silo corn silage, bunker
+silo black plastic tarp with tires, round hay bales white plastic,
+long feed bunk trough cattle eating, digital feed scale, mineral
+supplement bags stacked, flat block shading, 1px dark outlines,
+clean tilemap, 1920x1080
+
+## EP6 — ep6_oficina.png
+16-bit SNES pixel art isometric 2.5D top-down view, farm manager
+office interior Colombian cattle ranch, rustic wooden desk cattle
+registry ledger laptop, wall production performance board with charts,
+cork board documents, filing cabinet labeled folders, window view
+green pasture, SENA institutional colors accents, flat block shading,
+1px dark outlines, clean background, 1920x1080
+
+## EP7 — ep7_mercado.png
+16-bit SNES pixel art isometric 2.5D top-down view, cattle farm
+loading sales area main gate, livestock transport truck dirt road,
+certified platform livestock scale, negotiation table shade structure
+documents, milk cans packaged cheese on display, quality certification
+posters, Colombian countryside road beyond gate, flat block shading,
+1px dark outlines, clean game layer, 1920x1080
+
+## EP_FINAL — ep_final_plaza.png
+16-bit SNES pixel art isometric 2.5D top-down view, central plaza
+complete Colombian sustainable cattle farm La Esperanza, full
+panoramic overhead all farm zones visible: milking parlor maternity
+pastures silo office loading area, golden sunset, SENA green pennants
+celebration atmosphere, native vegetation surrounding property,
+vibrant maximally saturated palette, flat block shading,
+1px dark outlines, clean master tilemap no UI, 1920x1080
