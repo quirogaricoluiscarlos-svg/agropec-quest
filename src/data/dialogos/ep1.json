@@ -1,0 +1,12 @@
+{
+  "npc_veterinario": [
+    { "type": "dialogue", "speaker": "Dr. Ramírez", "face": "face_ramirez", "text": "Este potrero está en mal estado. La mitad del pasto está degradado por el sobrepastoreo. Necesitamos implementar un sistema de rotación urgente." },
+    { "type": "quiz", "question": "¿Cada cuántos días se debe rotar el ganado en un sistema de pastoreo rotacional?", "options": ["7 a 15 días", "30 a 45 días", "60 a 90 días"], "correct": 0, "feedback_ok": "¡Correcto! La rotación frecuente permite que el pasto se recupere.", "feedback_err": "Incorrecto. La rotación debe ser cada 7-15 días para la correcta recuperación del pasto." },
+    { "type": "dialogue", "speaker": "Dr. Ramírez", "face": "face_ramirez", "text": "También debemos resembrar con pastos mejorados como Brachiaria y Tanzania. Son resistentes a la sequía del llano." },
+    { "type": "quiz", "question": "¿Qué pasto mejorado es ideal para el llano colombiano?", "options": ["Ryegrass", "Brachiaria", "Kikuyo"], "correct": 1, "feedback_ok": "¡Exacto! La Brachiaria es el pasto más adaptado a las condiciones del llano.", "feedback_err": "No. El Brachiaria es el más adecuado para las condiciones del llano." }
+  ],
+  "npc_don_carlos": [
+    { "type": "dialogue", "speaker": "Don Carlos", "face": "face_carlos", "text": "El pastoreo rotacional nos ha aumentado la producción de leche en un 20%. Dividimos el potrero en 8 cuarteles y rotamos el ganado." },
+    { "type": "quiz", "question": "¿Cuántos cuarteles usa Don Carlos en su sistema rotacional?", "options": ["4 cuarteles", "8 cuarteles", "12 cuarteles"], "correct": 1, "feedback_ok": "¡Correcto! 8 cuarteles permiten 7 días de pastoreo y 49 días de descanso.", "feedback_err": "Don Carlos usa 8 cuarteles para su sistema de rotación." }
+  ]
+}

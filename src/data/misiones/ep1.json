@@ -1,0 +1,6 @@
+{
+  "misiones": [
+    { "id": "mision_veterinario_potrero", "descripcion": "Aprende sobre rotación de potreros con el Dr. Ramírez", "trigger": "dialogue_complete", "dialogueKey": "npc_veterinario" },
+    { "id": "mision_carlos_rotacion", "descripcion": "Conoce el sistema rotacional de Don Carlos", "trigger": "dialogue_complete", "dialogueKey": "npc_don_carlos" }
+  ]
+}
