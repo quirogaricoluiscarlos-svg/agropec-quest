@@ -24,35 +24,42 @@ export class HUD {
     if (!this._visible) return;
     ctx.save();
 
-    ctx.fillStyle = 'rgba(0,0,0,0.65)';
+    // Panel principal
+    ctx.fillStyle = 'rgba(0,20,40,0.88)';
+    ctx.strokeStyle = '#FDC300';
+    ctx.lineWidth = 3;
     ctx.beginPath();
-    ctx.roundRect(10, 10, 340, 60, 8);
+    ctx.roundRect(14, 14, 500, 88, 12);
     ctx.fill();
+    ctx.stroke();
 
+    // Retrato
     if (playerFaceKey) {
       try {
         const img = AssetLoader.get(playerFaceKey);
-        ctx.drawImage(img, 16, 14, 52, 52);
+        ctx.drawImage(img, 0, 0, img.naturalWidth / 2, img.naturalHeight, 22, 20, 70, 70);
       } catch {}
     }
 
+    // Nombre del episodio
     ctx.fillStyle = '#FDC300';
-    ctx.font = 'bold 16px monospace';
-    ctx.fillText(this._episodeName, 76, 32);
+    ctx.font = 'bold 26px monospace';
+    ctx.fillText(this._episodeName, 104, 48);
 
-    const barX = 76, barY = 42, barW = 240, barH = 16;
+    // Barra de progreso
+    const barX = 104, barY = 60, barW = 380, barH = 22;
     const filled = this._totalMissions > 0 ? this._completedMissions / this._totalMissions : 0;
-    ctx.fillStyle = '#333';
+    ctx.fillStyle = '#1a1a2e';
     ctx.fillRect(barX, barY, barW, barH);
     ctx.fillStyle = '#39A900';
     ctx.fillRect(barX, barY, Math.floor(barW * filled), barH);
     ctx.strokeStyle = '#39A900';
-    ctx.lineWidth = 1;
+    ctx.lineWidth = 2;
     ctx.strokeRect(barX, barY, barW, barH);
 
     ctx.fillStyle = '#fff';
-    ctx.font = '12px monospace';
-    ctx.fillText(`${this._completedMissions}/${this._totalMissions} misiones`, barX + 4, barY + 13);
+    ctx.font = 'bold 16px monospace';
+    ctx.fillText(`${this._completedMissions}/${this._totalMissions} misiones completadas`, barX + 6, barY + 17);
 
     ctx.restore();
   }

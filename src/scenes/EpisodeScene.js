@@ -23,6 +23,7 @@ export class EpisodeScene extends Scene {
     this._playerFaceKey = null;
     this._exitConfirm = false;
     this._initialized = false;
+    this._helpTimer = 6;
   }
 
   async init() {
@@ -55,6 +56,7 @@ export class EpisodeScene extends Scene {
 
   update(dt) {
     if (!this._initialized) return;
+    if (this._helpTimer > 0) this._helpTimer -= dt;
     this._dialogue.update(dt);
 
     if (!InputManager.dialogueActive) {
@@ -130,6 +132,32 @@ export class EpisodeScene extends Scene {
     this._player.draw(ctx);
     this._hud.draw(ctx, this._playerFaceKey);
     this._dialogue.draw(ctx);
+
+    // Instrucciones iniciales (primeros 6 segundos)
+    if (this._helpTimer > 0) {
+      const alpha = Math.min(1, this._helpTimer);
+      ctx.save();
+      ctx.globalAlpha = alpha * 0.92;
+      ctx.fillStyle = 'rgba(0,20,40,0.85)';
+      ctx.strokeStyle = '#FDC300';
+      ctx.lineWidth = 3;
+      ctx.beginPath();
+      ctx.roundRect(560, 920, 800, 130, 12);
+      ctx.fill(); ctx.stroke();
+      ctx.globalAlpha = alpha;
+      ctx.fillStyle = '#FDC300';
+      ctx.font = 'bold 26px monospace';
+      ctx.textAlign = 'center';
+      ctx.fillText('¿Cómo jugar?', 960, 950);
+      ctx.fillStyle = '#fff';
+      ctx.font = '22px monospace';
+      ctx.fillText('Muévete con WASD o haz clic en el suelo', 960, 980);
+      ctx.fillText('Acércate a los personajes y presiona ESPACIO', 960, 1010);
+      ctx.fillStyle = '#aaa';
+      ctx.font = '18px monospace';
+      ctx.fillText('ESC = salir al mapa', 960, 1038);
+      ctx.restore();
+    }
 
     if (this._exitConfirm) {
       ctx.save();

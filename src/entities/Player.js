@@ -5,15 +5,20 @@ import { AssetLoader } from '../engine/AssetLoader.js';
 import { InputManager } from '../systems/InputManager.js';
 import { Vector2 } from '../utils/Vector2.js';
 
-const SPRITE_W = 32;
-const SPRITE_H = 48;
-const SPEED    = 200;
-const ROWS     = { idle: 0, walk: 2 };
+const FRAME_COLS = 6;
+const FRAME_ROWS = 3;
+const DRAW_W = 130;
+const DRAW_H = 140;
+const SPEED  = 280;
+const ROWS   = { idle: 0, walk: 2 };
 
 export class Player extends Entity {
   constructor(spriteKey, x, y) {
-    super(x, y, SPRITE_W, SPRITE_H);
-    this.sprite = new SpriteSheet(AssetLoader.get(spriteKey), SPRITE_W, SPRITE_H, 6);
+    super(x, y, DRAW_W, DRAW_H);
+    const img = AssetLoader.get(spriteKey);
+    const frameW = img.naturalWidth  / FRAME_COLS;
+    const frameH = img.naturalHeight / FRAME_ROWS;
+    this.sprite = new SpriteSheet(img, frameW, frameH, FRAME_COLS);
     this._facingLeft = false;
     this._moving = false;
     this._target = null;
@@ -70,11 +75,11 @@ export class Player extends Entity {
 
     ctx.save();
     if (this._facingLeft) {
-      ctx.translate(this.x + this.width, this.y);
+      ctx.translate(this.x + DRAW_W, this.y);
       ctx.scale(-1, 1);
-      ctx.drawImage(this.sprite.image, frame.sx, frame.sy, frame.sw, frame.sh, 0, 0, this.width, this.height);
+      ctx.drawImage(this.sprite.image, frame.sx, frame.sy, frame.sw, frame.sh, 0, 0, DRAW_W, DRAW_H);
     } else {
-      ctx.drawImage(this.sprite.image, frame.sx, frame.sy, frame.sw, frame.sh, this.x, this.y, this.width, this.height);
+      ctx.drawImage(this.sprite.image, frame.sx, frame.sy, frame.sw, frame.sh, this.x, this.y, DRAW_W, DRAW_H);
     }
     ctx.restore();
   }

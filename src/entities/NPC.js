@@ -3,17 +3,22 @@ import { Entity } from './Entity.js';
 import { SpriteSheet } from '../utils/SpriteSheet.js';
 import { AssetLoader } from '../engine/AssetLoader.js';
 
-const SPRITE_W = 32;
-const SPRITE_H = 48;
+const FRAME_COLS = 6;
+const FRAME_ROWS = 3;
+const DRAW_W = 130;
+const DRAW_H = 140;
 
 export class NPC extends Entity {
   constructor({ id, x, y, spriteKey, faceKey, dialogueKey }) {
-    super(x, y, SPRITE_W, SPRITE_H);
+    super(x, y, DRAW_W, DRAW_H);
     this.id = id;
     this.spriteKey = spriteKey;
     this.faceKey = faceKey;
     this.dialogueKey = dialogueKey;
-    this.sprite = new SpriteSheet(AssetLoader.get(spriteKey), SPRITE_W, SPRITE_H, 6);
+    const img = AssetLoader.get(spriteKey);
+    const frameW = img.naturalWidth  / FRAME_COLS;
+    const frameH = img.naturalHeight / FRAME_ROWS;
+    this.sprite = new SpriteSheet(img, frameW, frameH, FRAME_COLS);
     this.inRange = false;
     this._bounceTimer = 0;
     this._bounceY = 0;
@@ -21,8 +26,8 @@ export class NPC extends Entity {
 
   update(dt) {
     if (this.inRange) {
-      this._bounceTimer += dt * 4;
-      this._bounceY = Math.sin(this._bounceTimer) * 4;
+      this._bounceTimer += dt * 3;
+      this._bounceY = Math.sin(this._bounceTimer) * 8;
     } else {
       this._bounceY = 0;
     }
@@ -31,14 +36,17 @@ export class NPC extends Entity {
   draw(ctx) {
     if (!this.visible) return;
     const { sx, sy, sw, sh } = this.sprite.idle(0);
-    ctx.drawImage(this.sprite.image, sx, sy, sw, sh, this.x, this.y, this.width, this.height);
+    ctx.drawImage(this.sprite.image, sx, sy, sw, sh, this.x, this.y, DRAW_W, DRAW_H);
 
     if (this.inRange) {
       ctx.save();
       ctx.fillStyle = '#FFD700';
-      ctx.font = 'bold 20px monospace';
+      ctx.strokeStyle = '#000';
+      ctx.lineWidth = 3;
+      ctx.font = 'bold 40px monospace';
       ctx.textAlign = 'center';
-      ctx.fillText('!', this.x + this.width / 2, this.y - 8 + this._bounceY);
+      ctx.strokeText('!', this.x + DRAW_W / 2, this.y - 12 + this._bounceY);
+      ctx.fillText('!', this.x + DRAW_W / 2, this.y - 12 + this._bounceY);
       ctx.restore();
     }
   }

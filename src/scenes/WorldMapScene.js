@@ -20,15 +20,15 @@ const SCENE_MAP = {
 };
 
 const HOTSPOTS = [
-  { id: 'ep0',     x: 350,  y: 820, r: 40, label: 'Entrada a la Finca' },
-  { id: 'ep1',     x: 480,  y: 650, r: 40, label: 'El Potrero Perdido' },
-  { id: 'ep2',     x: 680,  y: 460, r: 40, label: 'La Sala de Ordeño' },
-  { id: 'ep3',     x: 870,  y: 500, r: 40, label: 'La Maternidad' },
-  { id: 'ep4',     x: 1060, y: 450, r: 40, label: 'La Enfermería' },
-  { id: 'ep5',     x: 1230, y: 570, r: 40, label: 'El Silo y la Dieta' },
-  { id: 'ep6',     x: 1460, y: 420, r: 40, label: 'La Oficina del Gerente' },
-  { id: 'ep7',     x: 1620, y: 680, r: 40, label: 'El Mercado Verde' },
-  { id: 'ep_final',x: 960,  y: 300, r: 50, label: 'Episodio Final' },
+  { id: 'ep0',     x: 350,  y: 820, r: 55, label: 'EP0 · Entrada a la Finca' },
+  { id: 'ep1',     x: 480,  y: 650, r: 55, label: 'EP1 · El Potrero Perdido' },
+  { id: 'ep2',     x: 680,  y: 460, r: 55, label: 'EP2 · La Sala de Ordeño' },
+  { id: 'ep3',     x: 870,  y: 500, r: 55, label: 'EP3 · La Maternidad' },
+  { id: 'ep4',     x: 1060, y: 450, r: 55, label: 'EP4 · La Enfermería' },
+  { id: 'ep5',     x: 1230, y: 570, r: 55, label: 'EP5 · El Silo y la Dieta' },
+  { id: 'ep6',     x: 1460, y: 420, r: 55, label: 'EP6 · La Oficina del Gerente' },
+  { id: 'ep7',     x: 1620, y: 680, r: 55, label: 'EP7 · El Mercado Verde' },
+  { id: 'ep_final',x: 960,  y: 300, r: 65, label: '★ Episodio Final' },
 ];
 
 export class WorldMapScene extends Scene {
@@ -93,13 +93,22 @@ export class WorldMapScene extends Scene {
         ctx.textAlign = 'center';
         ctx.fillText('★', h.x, h.y + 8);
       } else {
-        const color = st === 'en_progreso' ? '#FDC300' : '#39A900';
-        ctx.globalAlpha = 0.3;
+        const color = st === 'en_progreso' ? '#FF8C00' : '#FFD700';
+        // Outer glow
+        ctx.globalAlpha = 0.35;
         ctx.fillStyle = color;
-        ctx.beginPath(); ctx.arc(h.x, h.y, h.r * pulse * 1.3, 0, Math.PI * 2); ctx.fill();
+        ctx.beginPath(); ctx.arc(h.x, h.y, h.r * pulse * 1.5, 0, Math.PI * 2); ctx.fill();
+        // Inner circle
         ctx.globalAlpha = 1;
         ctx.fillStyle = color;
-        ctx.beginPath(); ctx.arc(h.x, h.y, h.r, 0, Math.PI * 2); ctx.fill();
+        ctx.strokeStyle = '#fff';
+        ctx.lineWidth = 3;
+        ctx.beginPath(); ctx.arc(h.x, h.y, h.r, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+        // EP number inside
+        ctx.fillStyle = '#00304D';
+        ctx.font = 'bold 22px monospace';
+        ctx.textAlign = 'center';
+        ctx.fillText(h.id.replace('ep_final','★').replace('ep','EP').toUpperCase(), h.x, h.y + 8);
       }
 
       if (this._hovered === h.id) {
