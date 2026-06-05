@@ -1,0 +1,6 @@
+{
+  "misiones": [
+    { "id": "mision_rentabilidad", "descripcion": "Aprende sobre rentabilidad con Don Carlos", "trigger": "dialogue_complete", "dialogueKey": "npc_don_carlos" },
+    { "id": "mision_indicadores",  "descripcion": "Conoce los indicadores técnicos con Chigui", "trigger": "dialogue_complete", "dialogueKey": "npc_chigui" }
+  ]
+}

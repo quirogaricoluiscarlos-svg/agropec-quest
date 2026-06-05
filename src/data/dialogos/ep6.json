@@ -1,0 +1,10 @@
+{
+  "npc_don_carlos": [
+    { "type": "dialogue", "speaker": "Don Carlos", "face": "face_carlos", "text": "La gestión agroempresarial define el éxito de la finca. Llevamos registros de producción, costos e ingresos para calcular la rentabilidad mensual." },
+    { "type": "quiz", "question": "¿Qué es la rentabilidad de una finca ganadera?", "options": ["El total de litros producidos", "La diferencia entre ingresos y costos de producción", "El número de animales"], "correct": 1, "feedback_ok": "¡Correcto! Rentabilidad = Ingresos - Costos. Es el indicador clave del negocio.", "feedback_err": "La rentabilidad es la diferencia entre ingresos y costos de producción." }
+  ],
+  "npc_chigui": [
+    { "type": "dialogue", "speaker": "Chigui", "face": "face_chigui", "text": "Los indicadores técnicos como el intervalo entre partos (IEP) y la tasa de natalidad nos dicen si el hato está bien manejado." },
+    { "type": "quiz", "question": "¿Cuál es el intervalo entre partos (IEP) ideal en ganadería de doble propósito?", "options": ["Menos de 12 meses", "Entre 12 y 14 meses", "Más de 18 meses"], "correct": 1, "feedback_ok": "¡Correcto! Un IEP de 12-14 meses indica buena eficiencia reproductiva.", "feedback_err": "El IEP ideal es entre 12 y 14 meses para una buena eficiencia reproductiva." }
+  ]
+}
