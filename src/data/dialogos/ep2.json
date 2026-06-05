@@ -1,0 +1,10 @@
+{
+  "npc_veterinario": [
+    { "type": "dialogue", "speaker": "Dr. Ramírez", "face": "face_ramirez", "text": "Las buenas prácticas de ordeño son fundamentales para obtener leche de calidad. El proceso debe ser higiénico desde el inicio hasta el enfriamiento." },
+    { "type": "quiz", "question": "¿Cuál es la temperatura correcta para enfriar la leche después del ordeño?", "options": ["Entre 0°C y 4°C", "Entre 8°C y 12°C", "Entre 15°C y 20°C"], "correct": 0, "feedback_ok": "¡Correcto! La leche debe enfriarse a 0-4°C para conservar su calidad.", "feedback_err": "Incorrecto. La leche debe enfriarse a entre 0°C y 4°C lo más rápido posible." }
+  ],
+  "npc_don_carlos": [
+    { "type": "dialogue", "speaker": "Don Carlos", "face": "face_carlos", "text": "Antes de ordeñar cada vaca, lavamos los pezones con agua tibia y los secamos con toallas individuales desechables. Esto previene la mastitis." },
+    { "type": "quiz", "question": "¿Por qué se usan toallas individuales por vaca en el ordeño?", "options": ["Para ahorrar agua", "Para evitar contagio de mastitis entre vacas", "Por requisito legal"], "correct": 1, "feedback_ok": "¡Exacto! Evitar el contagio de mastitis es clave para la salud del hato.", "feedback_err": "El principal motivo es evitar el contagio de mastitis entre vacas." }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "misiones": [
+    { "id": "mision_ordeno_calidad", "descripcion": "Aprende buenas prácticas de ordeño con Dr. Ramírez", "trigger": "dialogue_complete", "dialogueKey": "npc_veterinario" },
+    { "id": "mision_ordeno_higiene", "descripcion": "Conoce el protocolo de higiene de Don Carlos", "trigger": "dialogue_complete", "dialogueKey": "npc_don_carlos" }
+  ]
+}
