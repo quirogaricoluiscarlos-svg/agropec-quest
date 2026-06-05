@@ -1,0 +1,6 @@
+{
+  "misiones": [
+    { "id": "mision_ensilaje",  "descripcion": "Aprende sobre ensilaje con Dr. Ramírez", "trigger": "dialogue_complete", "dialogueKey": "npc_veterinario" },
+    { "id": "mision_minerales", "descripcion": "Conoce la suplementación mineral con Don Carlos", "trigger": "dialogue_complete", "dialogueKey": "npc_don_carlos" }
+  ]
+}

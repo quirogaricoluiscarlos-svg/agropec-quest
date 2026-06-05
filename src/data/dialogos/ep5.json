@@ -1,0 +1,10 @@
+{
+  "npc_veterinario": [
+    { "type": "dialogue", "speaker": "Dr. Ramírez", "face": "face_ramirez", "text": "Una vaca de alta producción necesita una dieta balanceada. El ensilaje de maíz es una excelente fuente de energía para mantener la producción de leche." },
+    { "type": "quiz", "question": "¿Cuál es la función principal del ensilaje en la alimentación bovina?", "options": ["Fuente de proteína", "Reserva de energía para épocas de sequía", "Suplemento mineral"], "correct": 1, "feedback_ok": "¡Correcto! El ensilaje es la principal reserva energética para la época seca.", "feedback_err": "El ensilaje es una reserva de energía esencial para la época de sequía del llano." }
+  ],
+  "npc_don_carlos": [
+    { "type": "dialogue", "speaker": "Don Carlos", "face": "face_carlos", "text": "Suplementamos con sal mineralizada y melaza. La sal mineralizada aporta calcio, fósforo y oligoelementos esenciales para la reproducción." },
+    { "type": "quiz", "question": "¿Qué mineral es esencial para la reproducción bovina?", "options": ["Hierro", "Fósforo", "Sodio"], "correct": 1, "feedback_ok": "¡Correcto! El fósforo es fundamental para los procesos reproductivos del ganado.", "feedback_err": "El fósforo es el mineral más importante para la reproducción bovina." }
+  ]
+}
