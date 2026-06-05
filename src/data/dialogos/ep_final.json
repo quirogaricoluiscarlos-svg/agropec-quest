@@ -1,0 +1,15 @@
+{
+  "npc_don_carlos": [
+    { "type": "dialogue", "speaker": "Don Carlos", "face": "face_carlos", "text": "Has recorrido toda La Esperanza. Ahora demuestra que integraste los conocimientos de ganadería sostenible. ¡Este es tu examen final!" },
+    { "type": "quiz", "question": "¿Cuál es el primer paso del sistema de pastoreo rotacional?", "options": ["Dividir el potrero en cuarteles", "Comprar más ganado", "Aplicar herbicidas"], "correct": 0, "feedback_ok": "¡Excelente! Dividir el potrero en cuarteles es el fundamento del pastoreo rotacional.", "feedback_err": "Dividir el potrero en cuarteles es el primer paso del sistema rotacional." },
+    { "type": "quiz", "question": "¿Cuántas horas después del nacimiento debe recibir el calostro el ternero?", "options": ["48 horas", "24 horas", "6 horas"], "correct": 2, "feedback_ok": "¡Correcto! Las primeras 6 horas son críticas para la inmunidad del ternero.", "feedback_err": "El calostro debe suministrarse en las primeras 6 horas de vida." }
+  ],
+  "npc_veterinario": [
+    { "type": "dialogue", "speaker": "Dr. Ramírez", "face": "face_ramirez", "text": "Ahora integra todo lo aprendido sobre sanidad animal." },
+    { "type": "quiz", "question": "¿Qué vacuna es OBLIGATORIA para el ganado bovino en Colombia?", "options": ["Rabia", "Fiebre Aftosa", "Carbón sintomático"], "correct": 1, "feedback_ok": "¡Correcto! La fiebre aftosa es de vacunación obligatoria por el ICA.", "feedback_err": "La fiebre aftosa es la única de vacunación obligatoria por ley en Colombia." },
+    { "type": "dialogue", "speaker": "Dr. Ramírez", "face": "face_ramirez", "text": "¡Felicitaciones, Aprendiz SENA! Has demostrado dominar las competencias de ganadería sostenible. ¡La Finca del Saber es tuya!" }
+  ],
+  "npc_chigui": [
+    { "type": "dialogue", "speaker": "Chigui", "face": "face_chigui", "text": "¡Lo lograste! Recuerda siempre que una ganadería sostenible es rentable, responsable con el ambiente y respetuosa con los animales. ¡Orgullo SENA!" }
+  ]
+}

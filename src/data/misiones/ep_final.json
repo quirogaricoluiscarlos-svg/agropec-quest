@@ -1,0 +1,7 @@
+{
+  "misiones": [
+    { "id": "mision_integracion_gestion", "descripcion": "Demuestra tu conocimiento de gestión con Don Carlos", "trigger": "dialogue_complete", "dialogueKey": "npc_don_carlos" },
+    { "id": "mision_integracion_sanidad", "descripcion": "Demuestra tu conocimiento de sanidad con Dr. Ramírez", "trigger": "dialogue_complete", "dialogueKey": "npc_veterinario" },
+    { "id": "mision_despedida_chigui",    "descripcion": "Recibe la despedida de Chigui", "trigger": "dialogue_complete", "dialogueKey": "npc_chigui" }
+  ]
+}
