@@ -1,0 +1,10 @@
+{
+  "npc_don_carlos": [
+    { "type": "dialogue", "speaker": "Don Carlos", "face": "face_carlos", "text": "La comercialización sostenible implica vender productos con valor agregado. La leche certificada como libre de brucelosis tiene mejor precio en el mercado." },
+    { "type": "quiz", "question": "¿Qué ventaja tiene tener certificación sanitaria para vender ganado?", "options": ["Solo es un trámite burocrático", "Permite acceder a mejores mercados y precios", "No tiene ninguna ventaja"], "correct": 1, "feedback_ok": "¡Correcto! La certificación sanitaria abre puertas a mercados más exigentes y mejor pagados.", "feedback_err": "La certificación sanitaria permite acceder a mejores mercados y obtener mejores precios." }
+  ],
+  "npc_chigui": [
+    { "type": "dialogue", "speaker": "Chigui", "face": "face_chigui", "text": "La ganadería sostenible protege el medio ambiente. Reducir la huella de carbono y conservar las fuentes de agua aumenta el valor de la finca." },
+    { "type": "quiz", "question": "¿Cuál práctica ganadera contribuye a la sostenibilidad ambiental?", "options": ["Tala de árboles para ampliar potreros", "Silvopastoreo con árboles nativos", "Uso de herbicidas en pasturas"], "correct": 1, "feedback_ok": "¡Correcto! El silvopastoreo integra ganado, pastos y árboles para mayor sostenibilidad.", "feedback_err": "El silvopastoreo es la práctica más sostenible: integra árboles, pastos y ganado." }
+  ]
+}

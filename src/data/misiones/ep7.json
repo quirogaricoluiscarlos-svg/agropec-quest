@@ -1,0 +1,6 @@
+{
+  "misiones": [
+    { "id": "mision_certificacion",  "descripcion": "Aprende sobre comercialización certificada con Don Carlos", "trigger": "dialogue_complete", "dialogueKey": "npc_don_carlos" },
+    { "id": "mision_sostenibilidad", "descripcion": "Conoce la ganadería sostenible con Chigui", "trigger": "dialogue_complete", "dialogueKey": "npc_chigui" }
+  ]
+}
