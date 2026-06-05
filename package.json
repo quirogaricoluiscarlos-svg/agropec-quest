@@ -1,13 +1,25 @@
-﻿{
+{
   "name": "agropec-quest",
   "version": "1.0.0",
   "description": "RPG educativo ganadero - SENA Colombia",
   "main": "index.html",
   "scripts": {
     "dev": "npx live-server --port=3000 --open=index.html",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "build": "echo Build listo en /dist"
   },
-  "keywords": ["sena","ganaderia","rpg","educativo","pixel-art"],
+  "keywords": [
+    "sena",
+    "ganaderia",
+    "rpg",
+    "educativo",
+    "pixel-art"
+  ],
   "author": "Luis Carlos Quiroga Rico",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "vitest": "^1.0.0",
+    "happy-dom": "^12.0.0"
+  }
 }
