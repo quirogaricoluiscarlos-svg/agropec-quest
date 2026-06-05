@@ -1,0 +1,10 @@
+{
+  "npc_veterinario": [
+    { "type": "dialogue", "speaker": "Dr. Ramírez", "face": "face_ramirez", "text": "El manejo de la maternidad es crítico. El calostro es el primer alimento que debe recibir el ternero en las primeras 6 horas de vida." },
+    { "type": "quiz", "question": "¿En cuántas horas debe recibir el ternero el calostro después de nacer?", "options": ["En las primeras 2 horas", "En las primeras 6 horas", "En las primeras 24 horas"], "correct": 1, "feedback_ok": "¡Correcto! Las primeras 6 horas son clave para la absorción de anticuerpos.", "feedback_err": "El calostro debe suministrarse en las primeras 6 horas para máxima absorción de anticuerpos." }
+  ],
+  "npc_don_carlos": [
+    { "type": "dialogue", "speaker": "Don Carlos", "face": "face_carlos", "text": "Registramos cada nacimiento: fecha, peso, sexo y número de la madre. Este registro nos ayuda a tomar decisiones de selección genética." },
+    { "type": "quiz", "question": "¿Para qué sirve el registro de nacimientos en una finca?", "options": ["Solo para requisitos legales", "Para selección genética y manejo del hato", "No tiene utilidad práctica"], "correct": 1, "feedback_ok": "¡Correcto! Los registros son la base de la gestión técnica de la finca.", "feedback_err": "Los registros permiten hacer selección genética y mejorar el manejo del hato." }
+  ]
+}
