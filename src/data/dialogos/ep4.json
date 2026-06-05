@@ -1,0 +1,10 @@
+{
+  "npc_veterinario": [
+    { "type": "dialogue", "speaker": "Dr. Ramírez", "face": "face_ramirez", "text": "La bioseguridad es la base de la sanidad animal. Toda persona que ingrese a la finca debe pasar por el pediluvio y desinfectar su calzado." },
+    { "type": "quiz", "question": "¿Qué es un pediluvio en una finca ganadera?", "options": ["Un bebedero para el ganado", "Un recipiente con desinfectante para los pies", "Una ducha para animales"], "correct": 1, "feedback_ok": "¡Correcto! El pediluvio previene el ingreso de patógenos a la finca.", "feedback_err": "El pediluvio es un recipiente con desinfectante donde se sumerge el calzado para evitar entrada de patógenos." }
+  ],
+  "npc_chigui": [
+    { "type": "dialogue", "speaker": "Chigui", "face": "face_chigui", "text": "El calendario de vacunación es muy importante. En Colombia, la vacuna contra fiebre aftosa y brucelosis son obligatorias por ley." },
+    { "type": "quiz", "question": "¿Cuál vacuna bovina es OBLIGATORIA por ley en Colombia?", "options": ["Carbón bacteriano", "Fiebre aftosa", "Leptospirosis"], "correct": 1, "feedback_ok": "¡Correcto! La vacunación contra fiebre aftosa es obligatoria en Colombia.", "feedback_err": "La fiebre aftosa es la vacuna obligatoria por el ICA en Colombia." }
+  ]
+}

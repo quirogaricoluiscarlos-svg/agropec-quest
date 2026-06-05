@@ -1,0 +1,6 @@
+{
+  "misiones": [
+    { "id": "mision_bioseguridad", "descripcion": "Aprende bioseguridad con Dr. Ramírez", "trigger": "dialogue_complete", "dialogueKey": "npc_veterinario" },
+    { "id": "mision_vacunacion",   "descripcion": "Conoce el calendario de vacunación con Chigui", "trigger": "dialogue_complete", "dialogueKey": "npc_chigui" }
+  ]
+}
