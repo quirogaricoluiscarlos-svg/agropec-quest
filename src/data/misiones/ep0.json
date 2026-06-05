@@ -1,0 +1,6 @@
+{
+  "misiones": [
+    { "id": "mision_don_carlos", "descripcion": "Habla con Don Carlos para conocer la finca", "trigger": "dialogue_complete", "dialogueKey": "npc_don_carlos" },
+    { "id": "mision_chigui",     "descripcion": "Conoce a Chigui, la mascota de la finca",   "trigger": "dialogue_complete", "dialogueKey": "npc_chigui" }
+  ]
+}

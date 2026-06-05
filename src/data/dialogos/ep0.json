@@ -1,0 +1,26 @@
+{
+  "npc_don_carlos": [
+    { "type": "dialogue", "speaker": "Don Carlos", "face": "face_carlos",
+      "text": "¡Bienvenido a La Esperanza! Soy Don Carlos, administrador de esta finca ganadera. Aquí aprenderás todo sobre la producción bovina sostenible." },
+    { "type": "dialogue", "speaker": "Don Carlos", "face": "face_carlos",
+      "text": "La finca tiene 200 hectáreas dedicadas a ganadería de doble propósito: carne y leche. Contamos con cerca de 150 bovinos de razas Holstein y Brahman." },
+    { "type": "quiz",
+      "question": "¿Cuál es el sistema de producción de La Esperanza?",
+      "options": ["Solo carne", "Doble propósito (carne y leche)", "Solo leche"],
+      "correct": 1,
+      "feedback_ok": "¡Correcto! El doble propósito maximiza los ingresos de la finca.",
+      "feedback_err": "No es correcto. La finca produce tanto carne como leche." },
+    { "type": "dialogue", "speaker": "Don Carlos", "face": "face_carlos",
+      "text": "Explora la finca y habla con nuestro equipo. ¡Hay mucho por aprender! Puedes moverte con WASD o haciendo clic en el suelo." }
+  ],
+  "npc_chigui": [
+    { "type": "dialogue", "speaker": "Chigui", "face": "face_chigui",
+      "text": "¡Hola! Soy Chigui, la mascota oficial de la finca. Soy un chigüiro y represento la biodiversidad del llano colombiano." },
+    { "type": "quiz",
+      "question": "¿Qué animal es el chigüiro?",
+      "options": ["El roedor más grande del mundo", "Un tipo de cerdo salvaje", "Un reptil de los llanos"],
+      "correct": 0,
+      "feedback_ok": "¡Exacto! El chigüiro (Hydrochoerus hydrochaeris) es el roedor más grande del mundo.",
+      "feedback_err": "¡No! El chigüiro es el roedor más grande del mundo, nativo de Suramérica." }
+  ]
+}
