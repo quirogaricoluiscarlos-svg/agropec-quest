@@ -1,10 +1,9 @@
-import { describe, it, expect, beforeEach } from 'vitest';
+import { expect } from 'vitest';
 import { SaveManager } from '../systems/SaveManager.js';
-
-beforeEach(() => { localStorage.clear(); });
 
 describe('SaveManager', () => {
   it('load devuelve estado inicial si no hay guardado', () => {
+    localStorage.clear();
     const state = SaveManager.load();
     expect(state.personaje).toBeNull();
     expect(state.episodios.ep0).toBe('disponible');
@@ -12,6 +11,7 @@ describe('SaveManager', () => {
   });
 
   it('save y load persisten correctamente', () => {
+    localStorage.clear();
     const state = SaveManager.load();
     state.personaje = 'aprendiz_m';
     state.episodios.ep0 = 'completado';
@@ -23,6 +23,7 @@ describe('SaveManager', () => {
   });
 
   it('reset elimina el guardado', () => {
+    localStorage.clear();
     const state = SaveManager.load();
     state.personaje = 'aprendiz_f';
     SaveManager.save(state);
@@ -31,6 +32,7 @@ describe('SaveManager', () => {
   });
 
   it('completeMission marca mision', () => {
+    localStorage.clear();
     const state = SaveManager.load();
     state.personaje = 'aprendiz_m';
     SaveManager.save(state);

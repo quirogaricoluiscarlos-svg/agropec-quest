@@ -1,4 +1,4 @@
-import { describe, it, expect, vi } from 'vitest';
+import { expect, vi } from 'vitest';
 import { DialogueSystem } from '../systems/DialogueSystem.js';
 
 vi.mock('../ui/DialogueBox.js', () => ({

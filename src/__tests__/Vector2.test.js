@@ -1,4 +1,4 @@
-import { describe, it, expect } from 'vitest';
+import { expect } from 'vitest';
 import { Vector2 } from '../utils/Vector2.js';
 
 describe('Vector2', () => {
